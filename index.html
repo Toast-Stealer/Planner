@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mindful — make plans make sense</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Mindful home">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span>mindful</span>
+      </a>
+      <div class="topbar-actions">
+        <button class="ghost-button" id="inviteButton">Invite people</button>
+        <button class="ghost-button" id="helpButton">How it works</button>
+        <button class="profile-button" aria-label="Open profile">AK</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="spark">✦</span> your ideas, in one place</p>
+          <h1>Make plans<br /><em>make sense.</em></h1>
+          <p class="hero-text">A friendly space for the messy middle — think out loud, find your shape, and bring people along.</p>
+          <div class="hero-actions">
+            <button class="primary-button" id="newNotepadButton">Create a notepad <span>↗</span></button>
+            <button class="text-button" id="tourButton">Take a tiny tour <span>→</span></button>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="sun-shape"></div>
+          <div class="doodle doodle-one">↗</div>
+          <div class="doodle doodle-two">✳</div>
+          <div class="note-card note-yellow"><span class="mini-label">MONDAY</span><strong>Start<br />somewhere.</strong><div class="scribble">~ ~ ~</div></div>
+          <div class="note-card note-lilac"><span class="mini-label">IDEA #04</span><strong>What if<br />we...</strong><div class="scribble">✎</div></div>
+          <div class="note-card note-coral"><span class="mini-label">REMEMBER</span><strong>Small steps<br />count too.</strong><div class="scribble">● ● ●</div></div>
+        </div>
+      </section>
+
+      <section class="notepads-section" aria-labelledby="notepad-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">pick up where you left off</p><h2 id="notepad-title">Your notepads <span class="count">04</span></h2></div>
+          <button class="filter-button" id="filterButton">All notepads <span>⌄</span></button>
+        </div>
+        <div class="notepad-grid" id="notepadGrid">
+          <article class="notepad-card card-peach" data-type="personal" data-name="Weekend in Lisbon">
+            <div class="card-top"><span class="card-icon">☼</span><button class="more-button" aria-label="More options">•••</button></div>
+            <h3>Weekend in Lisbon</h3><p>places · food · good light</p>
+            <div class="card-footer"><span class="updated">Edited today</span><div class="avatars"><i>AK</i><i class="avatar-teal">JM</i><i class="avatar-more">+2</i></div></div>
+          </article>
+          <article class="notepad-card card-blue" data-type="shared" data-name="Studio moodboard">
+            <div class="card-top"><span class="card-icon">✦</span><button class="more-button" aria-label="More options">•••</button></div>
+            <h3>Studio moodboard</h3><p>colors · shapes · energy</p>
+            <div class="card-footer"><span class="updated">Edited yesterday</span><div class="avatars"><i>AK</i><i class="avatar-pink">LS</i></div></div>
+          </article>
+          <article class="notepad-card card-lilac" data-type="personal" data-name="The big maybe list">
+            <div class="card-top"><span class="card-icon">☵</span><button class="more-button" aria-label="More options">•••</button></div>
+            <h3>The big maybe list</h3><p>things to try · someday</p>
+            <div class="card-footer"><span class="updated">Edited 3 days ago</span><div class="avatars"><i>AK</i></div></div>
+          </article>
+          <button class="new-card" id="newCardButton"><span class="plus">＋</span><strong>Start something new</strong><small>Choose your planning style</small></button>
+        </div>
+      </section>
+
+      <section class="styles-section">
+        <div class="section-heading compact"><div><p class="eyebrow">there is no wrong way</p><h2>Find your flow</h2></div><span class="style-note">Mix and match whenever you want ✌</span></div>
+        <div class="style-grid">
+          <button class="style-card active-style" data-style="Freeform"><span class="style-visual freeform-visual"><b>idea</b><i>maybe...</i><u>why not?</u></span><span><strong>Freeform</strong><small>Let it all out</small></span><span class="style-arrow">↗</span></button>
+          <button class="style-card" data-style="Timeline"><span class="style-visual timeline-visual"><i></i><i></i><i></i></span><span><strong>Timeline</strong><small>See the big picture</small></span><span class="style-arrow">↗</span></button>
+          <button class="style-card" data-style="Checklist"><span class="style-visual checklist-visual"><i>✓</i><i>✓</i><i>□</i></span><span><strong>Checklist</strong><small>One thing at a time</small></span><span class="style-arrow">↗</span></button>
+          <button class="style-card" data-style="Mind map"><span class="style-visual map-visual"><i></i><i></i><i></i></span><span><strong>Mind map</strong><small>Connect the dots</small></span><span class="style-arrow">↗</span></button>
+          <button class="style-card" data-style="Scratch paper"><span class="style-visual scratch-visual"><i>hmm</i><i>try this</i><i>?</i></span><span><strong>Scratch paper</strong><small>No rules, just scribble</small></span><span class="style-arrow">↗</span></button>
+          <button class="style-card" data-style="Sticky notes"><span class="style-visual sticky-visual"><i></i><i></i><i></i></span><span><strong>Sticky notes</strong><small>Move ideas around</small></span><span class="style-arrow">↗</span></button>
+          <button class="style-card" data-style="Pros & cons"><span class="style-visual pros-visual"><i>+</i><i>−</i></span><span><strong>Pros & cons</strong><small>See every side</small></span><span class="style-arrow">↗</span></button>
+          <button class="style-card" data-style="Question storm"><span class="style-visual question-visual"><i>?</i><i>?</i><i>?</i></span><span><strong>Question storm</strong><small>Get curious first</small></span><span class="style-arrow">↗</span></button>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>Made for the wonderfully unfinished.</span><span>● <span id="onlineCount">12</span> friends planning right now</span></footer>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close-button" id="closeModal" aria-label="Close">×</button>
+      <p class="eyebrow">new idea, new page</p><h2 id="modalTitle">Start a notepad</h2><p class="modal-copy">Give your next thought a little room to grow.</p>
+      <label for="notepadName">What are you planning?</label><input id="notepadName" type="text" placeholder="e.g. Summer trip, launch plan..." />
+      <label for="notepadStyle">Choose a starting style</label><select id="notepadStyle"><option>Freeform</option><option>Timeline</option><option>Checklist</option><option>Mind map</option><option>Scratch paper</option><option>Sticky notes</option><option>Pros & cons</option><option>Question storm</option></select>
+      <button class="primary-button full-width" id="createButton">Create notepad <span>↗</span></button>
+    </div>
+  </div>
+
+  <div class="workspace-backdrop" id="workspaceBackdrop" hidden>
+    <section class="workspace" role="dialog" aria-modal="true" aria-labelledby="workspaceTitle">
+      <header class="workspace-header"><button class="back-button" id="closeWorkspace">← Back to notepads</button><div class="workspace-title"><span class="workspace-dot"></span><h2 id="workspaceTitle">Weekend in Lisbon</h2><span class="saved-label" id="savedLabel">Saved</span></div><div class="workspace-actions"><button class="chat-button" id="chatButton">☵ Chat <span>2</span></button><button class="invite-workspace" id="workspaceInvite">Invite</button></div></header>
+      <div class="workspace-body"><aside class="workspace-sidebar"><p class="eyebrow">planning style</p><button class="mode-button active-mode">☼ Freeform <span>⌄</span></button><button class="mode-button">＋ Add a section</button><div class="sidebar-spacer"></div><p class="eyebrow">people here</p><div class="presence"><span class="presence-avatar">AK</span><span class="presence-avatar teal">JM</span><span class="presence-avatar pink">LS</span><span class="presence-text">3 people</span></div></aside><main class="canvas"><div class="canvas-top"><span class="canvas-hint">Your space to think out loud</span><span class="canvas-tools">T &nbsp; ✎ &nbsp; ◇ &nbsp; ···</span></div><textarea id="workspaceEditor" aria-label="Edit your notepad" placeholder="Start anywhere...\n\nWrite a thought, drop a question, or sketch out what comes next."></textarea><div class="canvas-note note-a">book a tiny table<br />somewhere sunny ☼</div><div class="canvas-note note-b">don't forget<br />the good snacks</div></main></div>
+    </section>
+  </div>
+
+  <aside class="chat-drawer" id="chatDrawer" aria-label="Planning chat"><div class="chat-header"><div><p class="eyebrow">in this notepad</p><h2>Little chat <span>●</span></h2></div><button id="closeChat" aria-label="Close chat">×</button></div><div class="messages"><div class="message"><span class="message-avatar teal">JM</span><div><small>Jamie · 2:14 PM</small><p>Should we keep Sunday slow?</p></div></div><div class="message own"><div><small>You · 2:15 PM</small><p>Yes! A long lunch sounds perfect.</p></div><span class="message-avatar">AK</span></div><div class="message"><span class="message-avatar pink">LS</span><div><small>Lee · 2:16 PM</small><p>Added two sunny spots to the page ✦</p></div></div></div><form class="chat-form" id="chatForm"><input id="chatInput" placeholder="Say something..." autocomplete="off" /><button aria-label="Send message">↗</button></form></aside>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
